@@ -8,14 +8,14 @@ module MyEnumerable
     value
   end
 
-def any?
-  value = false
-  each do
-    @list
-      .each { |n| return true if yield n }
+  def any?
+    value = false
+    each do
+      @list
+        .each { |n| return true if yield n }
+    end
+    value
   end
-  value
-end
 
   def filter
     value = []
@@ -25,5 +25,4 @@ end
     end
     value
   end
-  
 end
